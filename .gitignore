@@ -7,7 +7,7 @@ dist/
 # Variables d'environnement
 .env
 .env.local
-
+.env.example
 # Journaux
 *.log
 
