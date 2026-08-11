@@ -1,0 +1,19 @@
+# Dependances
+node_modules/
+
+# Sortie compilee
+dist/
+
+# Variables d'environnement
+.env
+.env.local
+
+# Journaux
+*.log
+
+# Fichiers d'editeur/OS
+.vscode/
+.DS_Store
+
+# Cache de compilation TypeScript
+*.tsbuildinfo
