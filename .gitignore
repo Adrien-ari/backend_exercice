@@ -16,3 +16,5 @@ dist/
 
 # Cache de compilation TypeScript
 *.tsbuildinfo
+
+brouillon.txt
