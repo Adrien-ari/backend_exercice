@@ -10,6 +10,20 @@ export class StudentsController{
             next(err);
         }
     }
+
+    getStudentById = async (req: Request, res: Response, next: NextFunction) => {
+        
+        try {
+            console.log(req.params.id);
+            const id = parseInt(req.params.id);
+            const stdSvc = new studentService();
+            const result = await stdSvc.getByID(id);
+            res.status(200).json(result);
+
+        } catch (error) {
+            next(error)
+        }
+    }
 }
 
 export const studentsController = new StudentsController();

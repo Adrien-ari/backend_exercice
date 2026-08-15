@@ -16,5 +16,8 @@ export class StudentsRepository {
         const students = await pool.query<Students>("select * from students");
         return students.rows;
     }
+    getById = async (id:number): Promise<Students> => {
+        const student = await pool.query<Students>(`select * from students where id = ${id}`);
+        return student.rows[0] || null; 
     }
-
+    }
