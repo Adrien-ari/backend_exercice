@@ -27,19 +27,28 @@ export class StudentsRepository {
     last_name: string,
     date_of_birth: string,
     address: string,
+    email:string
   ): Promise<Students> => {
     const sql = `
     INSERT INTO students (first_name, last_name, date_of_birth, address)
-    VALUES ($1, $2, $3, $4)
+    VALUES ($1, $2, $3, $4, $5)
     RETURNING *;
   `;
     try {
-        const values = [first_name,last_name,date_of_birth,address]
+      const values = [first_name, last_name, date_of_birth, address, email];
       const anotherResult = await pool.query<Students>(sql, values);
       return anotherResult.rows[0];
     } catch (error) {
-        console.log("erreur sql");
+      console.log("erreur sql");
     }
     throw new Error("runtime error");
   };
+
+  async findByEmail(email: string) {
+    const result = await pool.query("SELECT * FROM students WHERE email = $1", [
+      email,
+    ]);
+
+    return result.rows[0] ?? null;
+  }
 }

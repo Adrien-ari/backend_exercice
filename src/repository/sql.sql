@@ -13,10 +13,10 @@ CREATE TABLE students (
 );
 
 -- 3. Insert 5 students with TIMESTAMP values (YYYY-MM-DD HH:MI:SS)
-INSERT INTO students (first_name, last_name, date_of_birth, address) 
+INSERT INTO students (first_name, last_name, date_of_birth, address, email) 
 VALUES
-    ( 'John', 'Doe', '2008-05-14 00:00:00', '123 Main St, Springfield, IL'),
-    ('Jane', 'Smith', '2008-08-22 00:00:00', '456 Elm St, Riverdale, NY'),
-    ('Alex', 'Johnson', '2007-11-03 00:00:00', '789 Oak Ave, Oakville, CA'),
-    ('Maria', 'Garcia', '2008-01-19 00:00:00', '321 Pine Rd, Maplewood, NJ'),
-    ( 'Liam', 'Brown', '2007-04-30 00:00:00', '654 Cedar Ln, Pineville, TX');
+    ('John', 'Doe', '2008-05-14 00:00:00', '123 Main St, Springfield, IL', 'john.doe@example.com'),
+    ('Jane', 'Smith', '2008-08-22 00:00:00', '456 Elm St, Riverdale, NY', 'jane.smith@example.com'),
+    ('Alex', 'Johnson', '2007-11-03 00:00:00', '789 Oak Ave, Oakville, CA', 'alex.johnson@example.com'),
+    ('Maria', 'Garcia', '2008-01-19 00:00:00', '321 Pine Rd, Maplewood, NJ', 'maria.garcia@example.com'),
+    ('Liam', 'Brown', '2007-04-30 00:00:00', '654 Cedar Ln, Pineville, TX', 'liam.brown@example.com');
