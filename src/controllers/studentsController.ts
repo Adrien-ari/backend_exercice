@@ -1,6 +1,7 @@
 import { studentSchema } from "../validators/studentsValidator";
 import { studentService } from "../services/students.service";
 import { Request, Response, NextFunction } from "express";
+
 export class StudentsController {
   getAllUsers = async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -36,7 +37,6 @@ export class StudentsController {
 
       const { first_name, last_name, date_of_birth, address, email } =
         await req.body;
-      console.log({ first_name, last_name, date_of_birth, address, email });
 
       const result = await studentsSvc.postStudent(
         first_name,
