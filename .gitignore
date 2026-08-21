@@ -7,7 +7,6 @@ dist/
 # Variables d'environnement
 .env
 .env.local
-.env.example
 # Journaux
 *.log
 
@@ -17,3 +16,7 @@ dist/
 
 # Cache de compilation TypeScript
 *.tsbuildinfo
+
+brouillon.txt
+
+.env
